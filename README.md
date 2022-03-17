@@ -4,7 +4,7 @@
 ## 配置：
 * CPU: 3.3 GHz 四核Intel Core i5 4590  
 * 显卡: HD4600 + NVIDIA Quadro K600 
-* 主板: intel H81M 芯片组 (七彩虹/colorful)   
+* 主板: intel H81 芯片组 (七彩虹/colorful H81M)   
 * 内存: 16 GB 1600 MHz DDR3  
 * 网卡：bcm94360cd (fenvi T919)  
 * 声卡：alc662  
