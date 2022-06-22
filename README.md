@@ -1,49 +1,58 @@
-# OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI
-个人自用最简洁OpenCore引导，除了iMessage不能使用，其它一切正常！
+# OpenCore-i3-i5-haswell-h81-alc662-HD4600-EFI
+Personal office computer is the most simple OpenCore EFI boot, except iMessage cannot be used, everything else is normal.
 
-## 配置：
-* CPU: 3.3 GHz 四核Intel Core i5 4590  
-* 显卡: HD4600 + NVIDIA Quadro K600 
-* 主板: intel H81 芯片组 (七彩虹/colorful H81M)   
-* 内存: 16 GB 1600 MHz DDR3  
-* 网卡+蓝牙：bcm94360cd (免驱网卡 fenvi T919)  
-* 声卡：alc662  
-* 视频线：HDMI  
-* 显示器：23英寸(1920 x 1080)  
+----
+
+**[中文](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README-zh.md) | [English](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README.md)**
+
+----
+
+## Configuration:
+* CPU: 3.3 GHz quad-core Intel Core i5 4590
+* Graphics Card: HD4600 + NVIDIA Quadro K600
+* Motherboard: intel H81 chipset (Colorful H81M)
+* Memory: 16 GB 1600 MHz DDR3
+* Network card + Bluetooth: bcm94360cd (free drive network card fenvi T919)
+* Sound card: alc662
+* Video cable: HDMI (because the K600 graphics card only has a DP port, a DP to HDMI adapter is used)
+* Display: 23 inches (1920 x 1080)
 
 
-## OpenCore版本：0.6.9
+## OpenCore description:
 
-> 精简掉了很多不必要的补丁和设置，其它基本已经处于最佳设置，整个 OC 大小仅 3M；  
-> 如: 移除了 hfs 补丁，因为0.6.0之后的OC都自带了hfs；  
-> 默认config.plist已关闭跑码模式，安装请使用config-debug.plist，安装完成再使用config.plist文件；
+> A lot of unnecessary patches and settings have been simplified, and others are basically in the best settings, and the entire EFI size is only 3M;
+> For example: remove the hfs patch, because the OC after 0.6.0 comes with hfs;
+> The default config.plist has turned off the running code mode, please use config-debug.plist for installation, and then use the config.plist file after installation;
+> Please use the corresponding EFI according to your system;
 
-## 说明：
 
-1. 如果是intel的wifi和蓝牙，请自行打上补丁，很简单。财力雄厚，可以购买bcm94360网卡；
-2. 如果是USB3.0不支持，请自行打上补丁，网上教程一大把；
-3. 如果啥问题都没有，那恭喜你，好好享用黑果吧；
+## illustrate:
 
-## 安装遇到问题？
+1. If it is intel's wifi and bluetooth, please patch it yourself, it is very simple. Strong financial resources, you can buy bcm94360 network card;
+2. If it is not supported by USB3.0, please patch it yourself, there are a lot of online tutorials;
+3. If there is no problem, then congratulations, enjoy the black fruit;
 
-> <a href="https://heipg.cn/tutorial/opencore-install-errors-handbook.html">1. OpenCore 安装卡住的拯救手册Q&A</a>  
-> <a href="https://shuiyunxc.github.io/2020/04/06/Faults/index/">2. OpenCore配置错误、故障与解决办法</a>  
-> <a href="https://blog.daliansky.net/">3. 黑果小兵的部落格</a>  
-> 4.补充：请留意 Misc -> Security -> secureBootModel 选项是否为Default，已知在10.13.6系统，需设置为Disabled才能进入系统，或者BIOS关闭secureBoot；  
-> 5. 引导界面无install选项？①换USB插口，请勿使用USB3.0插口；②扣主板电池；③换U盘，最好准备两个U盘；
+## Having trouble installing?
 
-按理支持所有Haswell架构处理器，支持的核显：HD4400 ~ HD4600
+> <a href="https://heipg.cn/tutorial/opencore-install-errors-handbook.html">1. OpenCore installation stuck rescue manual Q&A</a>
+> <a href="https://shuiyunxc.github.io/2020/04/06/Faults/index/">2. OpenCore configuration errors, faults and solutions</a>
+> <a href="https://blog.daliansky.net/">3. The blog of the black fruit soldier</a>
+> 4. Supplement: Please pay attention to whether the Misc -> Security -> secureBootModel option is Default. It is known that in the 10.13.6 system, it needs to be set to Disabled to enter the system, or the BIOS closes secureBoot;
+> 5. There is no install option in the boot interface? ①Change the USB socket, do not use the USB3.0 socket; ②Button the motherboard battery; ③Change the U disk, it is best to prepare two U disks;
 
-本人主力工作机已使用两年有余，目前一切正常；
+It is reasonable to support all Haswell architecture processors, supported core graphics: HD4400 ~ HD4600
 
-## 适配 macOS 说明：  
+My main work machine has been used for more than two years, and everything is normal now;
 
-* 最新的macOS 12 monterey及以上的系统无法使用；
-* 适用系统：macOS 10.13、macOS 10.14、macOS 10.15、macOS 11；
-* 推荐 macOS 10.15，再往上就不太适合了；
+## Adapt to macOS Instructions:
 
-## Tips：  
-1.  OpenCore并非补丁和驱动越多越好，而是越少越好，这里刚入门的小白容易踩雷，误以为补丁越多越好，其实是错的！此 EFI 已经被精简到 3M 大小了，开机速度非常快，基本无卡顿！  
-2.  OpenCore版本并不是越新越好，黑果追求的是稳定性，如果用着没什么毛病，没必要追求最新版OC，新版OC会带来新的问题，能用，稳定，无Bug就行，折腾党请便。  
+* The latest macOS 12 monterey and above systems cannot be used;
+* Applicable systems: macOS 10.13, macOS 10.14, macOS 10.15, macOS 11;
+* macOS 10.15 is recommended, and it is not suitable to go up;
+* Added EFI of Monterey system, but Monterey no longer supports drive-free K600 graphics card, it is not fully adapted yet, I will update it later;
 
-如有遇到问题，欢迎issues！或邮箱：licat233@gmail.com
+## Tips:
+1. OpenCore does not mean that the more patches and drivers, the better, but the less the better. The newbie here is easy to step on the thunder. He mistakenly thinks that the more patches the better, it is actually wrong! This EFI has been reduced to 3M size, the boot speed is very fast, and there is basically no lag!
+2. The OpenCore version is not the newer the better. Heigo pursues stability. If there is nothing wrong with using it, there is no need to pursue the latest version of OC. The new version of OC will bring new problems. It is usable, stable, and has no bugs. Toss the party please.
+
+If you encounter problems, welcome issues! Or email: licat233@gmail.com
