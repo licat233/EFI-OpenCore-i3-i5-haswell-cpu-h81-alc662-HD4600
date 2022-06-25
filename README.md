@@ -54,4 +54,5 @@ My main work machine has been used for more than two years, and everything is no
 1. OpenCore does not mean that the more patches and drivers, the better, but the less the better. The newbie here is easy to step on the thunder. He mistakenly thinks that the more patches the better, it is actually wrong! This EFI has been reduced to 3M size, the boot speed is very fast, and there is basically no lag!
 2. The OpenCore version is not the newer the better. Heigo pursues stability. If there is nothing wrong with using it, there is no need to pursue the latest version of OC. The new version of OC will bring new problems. It is usable, stable, and has no bugs. Toss the party please.
 
+If I can help you, I hope I can give a star  
 If you encounter problems, welcome issues! Or email: licat233@gmail.com
