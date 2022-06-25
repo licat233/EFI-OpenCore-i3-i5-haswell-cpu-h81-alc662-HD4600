@@ -46,10 +46,9 @@ My main work machine has been used for more than two years, and everything is no
 
 ## Adapt to macOS Instructions:
 
-* The latest macOS 12 monterey and above systems cannot be used;
-* Applicable systems: macOS 10.13, macOS 10.14, macOS 10.15, macOS 11;
-* macOS 10.15 is recommended, and it is not suitable to go up;
-* The EFI of the Monterey system is added. Since the latest version of Monterey has removed the built-in NVIDIA Kepler driver, you need to print the driver by yourself: [install NVIDIA driver tutorial](https://github.com/chris1111/Geforce-Kepler-patcher)；
+* Applicable systems: MacOS 10.13, MacOS 10.14, MacOS 10.15, MacOS 11;
+* The EFI of macos13 Monterey system is added. Since the latest version of Monterey has removed the built-in NVIDIA Kepler driver, you need to print the driver by yourself: [install NVIDIA driver tutorial]（ https://github.com/chris1111/Geforce-Kepler-patcher )；
+* Monterey is much smoother than bigsur. Monterey is recommended for both;
 
 ## Tips:
 1. OpenCore does not mean that the more patches and drivers, the better, but the less the better. The newbie here is easy to step on the thunder. He mistakenly thinks that the more patches the better, it is actually wrong! This EFI has been reduced to 3M size, the boot speed is very fast, and there is basically no lag!

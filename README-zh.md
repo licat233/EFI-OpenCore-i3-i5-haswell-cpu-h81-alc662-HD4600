@@ -46,10 +46,9 @@
 
 ## 适配 macOS 说明：  
 
-* 最新的macOS 12 monterey及以上的系统无法使用；
 * 适用系统：macOS 10.13、macOS 10.14、macOS 10.15、macOS 11；
-* 推荐 macOS 10.15，再往上就不太适合了；
-* 新增了Monterey系统的EFI，由于Monterey最新版本已经移除了内置的英伟达开普勒驱动，所以需要自行打上驱动：[安装Nvidia驱动教程](https://github.com/chris1111/Geforce-Kepler-patcher)；
+* 新增了macOS13 Monterey系统的EFI，由于Monterey最新版本已经移除了内置的英伟达开普勒驱动，所以需要自行打上驱动：[安装Nvidia驱动教程](https://github.com/chris1111/Geforce-Kepler-patcher)；
+* Monterey相较BigSur要流畅得多，两者建议使用Monterey;
 
 ## Tips：  
 1.  OpenCore并非补丁和驱动越多越好，而是越少越好，这里刚入门的小白容易踩雷，误以为补丁越多越好，其实是错的！此 EFI 已经被精简到 3M 大小了，开机速度非常快，基本无卡顿！  
