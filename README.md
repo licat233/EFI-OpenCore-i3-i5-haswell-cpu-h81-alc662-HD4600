@@ -1,11 +1,11 @@
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI  
 
-The most concise OpenCORE EFI boot for personal office computers. Everything is normal except IMessage.  
+The most concise OpenCore EFI boot for personal office computers. Everything is normal except IMessage.  
 it supports all i3-i5 processors used in the 4th generation Haswell architecture, and supports core display: hd4400 ~ hd4600
 
 ----
 
-**[Chinese](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README-zh.md) | [English](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README.md)**
+**[中文](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README-zh.md) | [English](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README.md)**
 
 ----
 ## Configuration:  
