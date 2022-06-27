@@ -527,7 +527,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02451270GUG2Y71H</string>
+			<string>C02416207QXG2Y7JA</string>
 			<key>ProcessorType</key>
 			<integer>1541</integer>
 			<key>ROM</key>
@@ -539,9 +539,9 @@
 			<key>SystemProductName</key>
 			<string>iMac15,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02NVKYMFY10</string>
+			<string>C02MLXZQFY10</string>
 			<key>SystemUUID</key>
-			<string>C5032D2C-4EFE-439C-A5A9-59B37D5CBBD5</string>
+			<string>83438A8F-0CE8-49BD-9EDE-D4175AFF698F</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -576,7 +576,7 @@
 			<key>AppleEvent</key>
 			<string>Auto</string>
 			<key>CustomDelays</key>
-			<false/>
+			<string>Auto</string>
 			<key>KeyInitialDelay</key>
 			<integer>50</integer>
 			<key>KeySubsequentDelay</key>
@@ -704,17 +704,11 @@
 			<false/>
 			<key>DisableSecurityPolicy</key>
 			<false/>
-			<key>EnableVectorAcceleration</key>
-			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
-			<key>ForgeUefiSupport</key>
-			<false/>
 			<key>IgnoreInvalidFlexRatio</key>
 			<true/>
 			<key>ReleaseUsbOwnership</key>
-			<false/>
-			<key>ReloadOptionRoms</key>
 			<false/>
 			<key>RequestBootVarRouting</key>
 			<false/>

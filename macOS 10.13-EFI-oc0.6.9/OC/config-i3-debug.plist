@@ -126,18 +126,18 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key># framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+				<key># framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key># framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key># model</key>
+				<string>Intel HD Graphics 4600</string>
 				<key>AAPL,ig-platform-id</key>
 				<data>AwAiDQ==</data>
 				<key>device-id</key>
 				<data>EgQAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>model</key>
-				<string>Intel HD Graphics 4600</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -524,7 +524,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02413802QXG2Y7A8</string>
+			<string>D25323303CDF8YLA8</string>
 			<key>ProcessorType</key>
 			<integer>1541</integer>
 			<key>ROM</key>
@@ -534,11 +534,11 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>iMac15,1</string>
+			<string>iMac14,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02MH0SDFY10</string>
+			<string>D25KT2ZCF8JC</string>
 			<key>SystemUUID</key>
-			<string>7AD5A93E-6E06-4A4C-A3F1-727043B72A26</string>
+			<string>6FAE7645-B2FD-49BA-BB4B-F8588C9C8A15</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>

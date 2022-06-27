@@ -22,7 +22,7 @@
 
 > 精简掉了很多不必要的补丁和设置，其它基本已经处于最佳设置，整个 EFI 大小仅 3M；  
 > 如: 移除了 hfs 补丁，因为0.6.0之后的OC都自带了hfs；  
-> 默认config.plist已关闭跑码模式，安装请使用config-debug.plist，安装完成再使用config.plist文件；
+> 默认config.plist已关闭跑码模式，安装请使用config-debug.plist，安装完成再使用config-product.plist文件；
 > 请根据自己系统使用对应的 EFI；
 
 

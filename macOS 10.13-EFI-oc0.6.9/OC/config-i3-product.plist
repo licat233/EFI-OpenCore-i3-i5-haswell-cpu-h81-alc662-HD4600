@@ -130,13 +130,13 @@
 				<data>AwAiDQ==</data>
 				<key>device-id</key>
 				<data>EgQAAA==</data>
-				<key>framebuffer-fbmem</key>
+				<key># framebuffer-fbmem</key>
 				<data>AACQAA==</data>
-				<key>framebuffer-patch-enable</key>
+				<key># framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
+				<key># framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>model</key>
+				<key># model</key>
 				<string>Intel HD Graphics 4600</string>
 			</dict>
 		</dict>
@@ -355,7 +355,7 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
 			<key>LauncherPath</key>
@@ -371,18 +371,18 @@
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>5</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
 			<key>AppleDebug</key>
-			<true/>
+			<false/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
 			<true/>
 			<key>DisplayDelay</key>
@@ -394,7 +394,7 @@
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
-			<integer>3</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Entries</key>
 		<array/>
@@ -453,7 +453,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>alcid=5 -v debug=0x100</string>
+				<string>alcid=5</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>prev-lang:kbd</key>
@@ -524,7 +524,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02413802QXG2Y7A8</string>
+			<string>D25343310J9F8YLFB</string>
 			<key>ProcessorType</key>
 			<integer>1541</integer>
 			<key>ROM</key>
@@ -534,11 +534,11 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>iMac15,1</string>
+			<string>iMac14,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02MH0SDFY10</string>
+			<string>D25LLTYNF8JC</string>
 			<key>SystemUUID</key>
-			<string>7AD5A93E-6E06-4A4C-A3F1-727043B72A26</string>
+			<string>4E4DEA8D-DEAB-4539-B675-A7398A4090F3</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -609,7 +609,6 @@
 		<key>Drivers</key>
 		<array>
 			<string>OpenRuntime.efi</string>
-			<string>OpenHfsPlus.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>

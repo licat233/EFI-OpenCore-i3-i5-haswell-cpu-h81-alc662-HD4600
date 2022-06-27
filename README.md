@@ -22,7 +22,7 @@ Personal office computer is the most simple OpenCore EFI boot, except iMessage c
 
 > A lot of unnecessary patches and settings have been simplified, and others are basically in the best settings, and the entire EFI size is only 3M;
 > For example: remove the hfs patch, because the OC after 0.6.0 comes with hfs;
-> The default config.plist has turned off the running code mode, please use config-debug.plist for installation, and then use the config.plist file after installation;
+> The default config.plist has turned off the running code mode, please use config-debug.plist for installation, and then use the config-product.plist file after installation;
 > Please use the corresponding EFI according to your system;
 
 
