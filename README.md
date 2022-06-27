@@ -1,58 +1,62 @@
-# OpenCore-i3-i5-haswell-h81-alc662-HD4600-EFI
-Personal office computer is the most simple OpenCore EFI boot, except iMessage cannot be used, everything else is normal.
+# OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI  
+
+The most concise OpenCORE EFI boot for personal office computers. Everything is normal except IMessage.  
+it supports all i3-i5 processors used in the 4th generation Haswell architecture, and supports core display: hd4400 ~ hd4600
 
 ----
 
-**[中文](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README-zh.md) | [English](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README.md)**
+**[Chinese](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README-zh.md) | [English](https://github.com/licat233/EFI-OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600/blob/main/README.md)**
 
 ----
+## Configuration:  
 
-## Configuration:
-* CPU: 3.3 GHz quad-core Intel Core i5 4590
-* Graphics Card: HD4600 + NVIDIA Quadro K600
-* Motherboard: intel H81 chipset (Colorful H81M)
-* Memory: 16 GB 1600 MHz DDR3
-* Network card + Bluetooth: bcm94360cd (free drive network card fenvi T919)
-* Sound card: alc662
-* Video cable: HDMI (because the K600 graphics card only has a DP port, a DP to HDMI adapter is used)
-* Display: 23 inches (1920 x 1080)
+* Cpu:  3.3 GHz quad core Intel Core i5 4590
+* Graphics card:  hd4600 + NVIDIA Quadro K600
+* Motherboard:  Intel H81 chipset (seven rainbow /colorful h81m)
+* Memory:  16 GB 1600 MHz DDR3
+* Network card + Bluetooth:  bcm94360cd (drive free network card fenvi t919)
+* Sound card:  alc662
+* Video cable:  HDMI (since K600 graphics card only has DP port, a DP to HDMI adapter is used)
+* Display:  23 inches (1920 x 1080)
 
+## OpenCORE Description:
 
-## OpenCore description:
+> Many unnecessary patches and settings have been simplified, and other settings are basically in the best setting. The entire EFI size is only 3M;
+> For example, the HFS patch is removed because OCS after 0.6.0 have their own HFS;
+> Default config Plist has closed debug. Please use config debug Plist, and then use config product Plist file;
+> Please use the corresponding EFI according to your own system;
 
-> A lot of unnecessary patches and settings have been simplified, and others are basically in the best settings, and the entire EFI size is only 3M;
-> For example: remove the hfs patch, because the OC after 0.6.0 comes with hfs;
-> The default config.plist has turned off the running code mode, please use config-debug.plist for installation, and then use the config-product.plist file after installation;
-> Please use the corresponding EFI according to your system;
+## Note: platforminfo must be modified
 
+1. if it is Intel WiFi and Bluetooth, please patch it yourself. It is very simple. With abundant financial resources, you can buy bcm94360 network card;
+2. if USB3.0 does not support it, please patch it by yourself and do a lot of online tutorials;
+3. if there is no problem, congratulations and enjoy the black fruit;
 
-## illustrate:
+## Problem with installation? 
 
-1. If it is intel's wifi and bluetooth, please patch it yourself, it is very simple. Strong financial resources, you can buy bcm94360 network card;
-2. If it is not supported by USB3.0, please patch it yourself, there are a lot of online tutorials;
-3. If there is no problem, then congratulations, enjoy the black fruit;
+> 1.  [opencore installation stuck Rescue Manual q&amp;a]（ https://heipg.cn/tutorial/opencore-install-errors-handbook.html )
+> 2.  [opencore configuration errors, faults and solutions]（ https://shuiyunxc.github.io/2020/04/06/Faults/index )
+> 3.  [blog of black fruit soldier]（ https://blog.daliansky.net/ )
+> 4.  There is no install option in the boot interface?
+> * ① misc - > Security - > set scan policy to 0;
+> * ② UEFI - > UEFI driver - > add these two drivers: openhfsplus efi、OpenRuntime. efi;
 
-## Having trouble installing?
+This EFI has been used on my computer for more than two years, and everything is normal at present;
 
-> <a href="https://heipg.cn/tutorial/opencore-install-errors-handbook.html">1. OpenCore installation stuck rescue manual Q&A</a>
-> <a href="https://shuiyunxc.github.io/2020/04/06/Faults/index/">2. OpenCore configuration errors, faults and solutions</a>
-> <a href="https://blog.daliansky.net/">3. The blog of the black fruit soldier</a>
-> 4. Supplement: Please pay attention to whether the Misc -> Security -> secureBootModel option is Default. It is known that in the 10.13.6 system, it needs to be set to Disabled to enter the system, or the BIOS closes secureBoot;
-> 5. There is no install option in the boot interface? ①Change the USB socket, do not use the USB3.0 socket; ②Button the motherboard battery; ③Change the U disk, it is best to prepare two U disks;
+## MacOS adapted:
 
-It is reasonable to support all Haswell architecture processors, supported core graphics: HD4400 ~ HD4600
+- MacOS High Sierra (I3 CPU recommended, silky experience)
+- MacOS Mojave (according to personal preference: the system starts to abandon the AR network card driver and needs to drive it into SLE by itself)
+- MacOS Catalina (recommended for i5 CPU, good compatibility, not recommended for I3 CPU, not very smooth)
+- MacOS Big Sur (not smooth enough, Not recommended for i3 CPU and i5 CPU)
+- MacOS Monterey (try it out. Since the latest version of Monterey has removed the built-in NVIDIA Kepler driver, you need to print the driver by yourself: [install NVIDIA driver tutorial](https://github.com/chris1111/Geforce-Kepler-patcher), Monterey is much smoother than bigsur, and Monterey is recommended for both)
 
-My main work machine has been used for more than two years, and everything is normal now;
+## Related drives:
 
-## Adapt to macOS Instructions:
+* Atheros network card driver: the system above MacOS Mojave cancels the support for Atheros network card. If you have an Atheros network card, please send it to SLE by yourself. Remember to close SIP and rebuild the cache;
 
-* Applicable systems: MacOS 10.13, MacOS 10.14, MacOS 10.15, MacOS 11;
-* The EFI of macos13 Monterey system is added. Since the latest version of Monterey has removed the built-in NVIDIA Kepler driver, you need to print the driver by yourself: [install NVIDIA driver tutorial]（ https://github.com/chris1111/Geforce-Kepler-patcher )；
-* Monterey is much smoother than bigsur. Monterey is recommended for both;
-
-## Tips:
-1. OpenCore does not mean that the more patches and drivers, the better, but the less the better. The newbie here is easy to step on the thunder. He mistakenly thinks that the more patches the better, it is actually wrong! This EFI has been reduced to 3M size, the boot speed is very fast, and there is basically no lag!
-2. The OpenCore version is not the newer the better. Heigo pursues stability. If there is nothing wrong with using it, there is no need to pursue the latest version of OC. The new version of OC will bring new problems. It is usable, stable, and has no bugs. Toss the party please.
-
-If I can help you, I hope I can give a star  
-If you encounter problems, welcome issues! Or email: licat233@gmail.com
+## Tips：  
+1. OpenCORE does not mean that the more patches and drivers, the better, but the less. Xiaobai, who has just started here, is easy to step on thunder. He mistakenly thinks that the more patches, the better. In fact, he is wrong! This EFI has been reduced to 3m size. The boot speed is very fast, and there is basically no jam!
+2. the OpenCORE version is not as new as possible. Heiguo pursues stability. If there is nothing wrong with using it, there is no need to pursue the latest version of OC. The new version of OC will bring new problems. It can be used, stable, and free of bugs. Please help the party.
+If I can help you, I hope I can give a star
+If you have any problems, please issue! Or email: licat233@gmail.com

@@ -1,5 +1,6 @@
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI
-个人办公电脑自用最简洁OpenCore EFI引导，除了iMessage不能使用，其它一切正常。
+个人办公电脑自用最简洁OpenCore EFI引导，除了iMessage不能使用，其它一切正常。  
+理论上支持所有使用于4代Haswell架构i3-i5处理器，支持核显：HD4400 ~ HD4600  
 
 ----
 
@@ -22,11 +23,11 @@
 
 > 精简掉了很多不必要的补丁和设置，其它基本已经处于最佳设置，整个 EFI 大小仅 3M；  
 > 如: 移除了 hfs 补丁，因为0.6.0之后的OC都自带了hfs；  
-> 默认config.plist已关闭跑码模式，安装请使用config-debug.plist，安装完成再使用config-product.plist文件；
+> 默认config.plist已关闭debug，安装请使用config-debug.plist，安装完成再使用config-product.plist文件；
 > 请根据自己系统使用对应的 EFI；
 
 
-## 说明：
+## 说明：一定要修改 PlatformInfo  
 
 1. 如果是intel的wifi和蓝牙，请自行打上补丁，很简单。财力雄厚，可以购买bcm94360网卡；
 2. 如果是USB3.0不支持，请自行打上补丁，网上教程一大把；
@@ -34,21 +35,24 @@
 
 ## 安装遇到问题？
 
-> <a href="https://heipg.cn/tutorial/opencore-install-errors-handbook.html">1. OpenCore 安装卡住的拯救手册Q&A</a>  
-> <a href="https://shuiyunxc.github.io/2020/04/06/Faults/index/">2. OpenCore配置错误、故障与解决办法</a>  
-> <a href="https://blog.daliansky.net/">3. 黑果小兵的部落格</a>  
-> 4.补充：请留意 Misc -> Security -> secureBootModel 选项是否为Default，已知在10.13.6系统，需设置为Disabled才能进入系统，或者BIOS关闭secureBoot；  
-> 5. 引导界面无install选项？①换USB插口，请勿使用USB3.0插口；②扣主板电池；③换U盘，最好准备两个U盘；
+> 1. [OpenCore 安装卡住的拯救手册Q&A](https://heipg.cn/tutorial/opencore-install-errors-handbook.html)
+> 2. [OpenCore配置错误、故障与解决办法](https://shuiyunxc.github.io/2020/04/06/Faults/index)
+> 3. [黑果小兵的部落格](https://blog.daliansky.net/)
+> 4. 引导界面无install选项？  
+> * ①  Misc -> Security -> 设置 Scan Policy 为 0;
+> * ②  UEFI -> UEFI驱动 -> 添加这两个驱动：OpenHfsPlus.efi、OpenRuntime.efi;
 
-按理支持所有Haswell架构处理器，支持的核显：HD4400 ~ HD4600
+此EFI在本人工作的电脑已使用两年有余，目前一切正常；
 
-本人主力工作机已使用两年有余，目前一切正常；
+## 已适配 macOS ：  
+  - macOS High Sierra （i3 CPU推荐，丝滑体验）
+  - macOS Mojave （看个人喜好：该系统开始摒弃了AR网卡驱动，需要自行打驱动到SLE内）
+  - macOS Catalina （i5 CPU推荐，兼容性好，i3 CPU不推荐，不太流畅）
+  - macOS Big Sur （i3 CPU和i5 CPU都不推荐，流畅度不够）
+  - macOS Monterey （尝鲜，由于Monterey最新版本已经移除了内置的英伟达开普勒驱动，所以需要自行打上驱动：[安装Nvidia驱动教程](https://github.com/chris1111/Geforce-Kepler-patcher)，Monterey相较BigSur要流畅得多，两者建议使用Monterey）
 
-## 适配 macOS 说明：  
-
-* 适用系统：macOS 10.13、macOS 10.14、macOS 10.15、macOS 11；
-* 新增了macOS13 Monterey系统的EFI，由于Monterey最新版本已经移除了内置的英伟达开普勒驱动，所以需要自行打上驱动：[安装Nvidia驱动教程](https://github.com/chris1111/Geforce-Kepler-patcher)；
-* Monterey相较BigSur要流畅得多，两者建议使用Monterey;
+## 相关驱动:  
+* Atheros网卡驱动：macOS Mojave以上系统取消了对Atheros网卡的支持，如果你的是Atheros网卡，请自行打渠道到SLE内，记得关闭SIP，重建缓存；
 
 ## Tips：  
 1.  OpenCore并非补丁和驱动越多越好，而是越少越好，这里刚入门的小白容易踩雷，误以为补丁越多越好，其实是错的！此 EFI 已经被精简到 3M 大小了，开机速度非常快，基本无卡顿！  
