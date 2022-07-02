@@ -18,6 +18,9 @@
 * 视频线：HDMI （由于K600显卡只有DP端口，所以使用了一个DP转HDMI的转接头）  
 * 显示器：23英寸(1920 x 1080)  
 
+## 配件:
+* 该系统不支持主板上的VGA接口输出，如果无HDMI接口，可考虑使用DVI接口输出，可以够买一个DVI转VGA转接头，才10元不到，[个人推荐购买6.4元](https://detail.tmall.com/item.htm?id=542894961035)；
+* 如果没有蓝牙，可购买一个免驱USB蓝牙模块，[个人推荐购买6.6元](https://item.taobao.com/item.htm?id=560155262998);
 
 ## OpenCore说明：
 
@@ -45,6 +48,7 @@
 此EFI在本人工作的电脑已使用两年有余，目前一切正常；
 
 ## 已适配 macOS ：  
+
   - macOS High Sierra （i3 CPU推荐，丝滑体验）
   - macOS Mojave （看个人喜好：该系统开始摒弃了AR网卡驱动，需要自行打驱动到SLE内）
   - macOS Catalina （i5 CPU推荐，兼容性好，i3 CPU不推荐，不太流畅）
@@ -52,9 +56,11 @@
   - macOS Monterey （尝鲜，由于Monterey最新版本已经移除了内置的英伟达开普勒驱动，所以需要自行打上驱动：[安装Nvidia驱动教程](https://github.com/chris1111/Geforce-Kepler-patcher)，Monterey相较BigSur要流畅得多，两者建议使用Monterey）
 
 ## 相关驱动:  
+
 * Atheros网卡驱动：macOS Mojave以上系统取消了对Atheros网卡的支持，如果你的是Atheros网卡，请自行打渠道到SLE内，记得关闭SIP，重建缓存；
 
 ## Tips：  
+
 1.  OpenCore并非补丁和驱动越多越好，而是越少越好，这里刚入门的小白容易踩雷，误以为补丁越多越好，其实是错的！此 EFI 已经被精简到 3M 大小了，开机速度非常快，基本无卡顿！  
 2.  OpenCore版本并不是越新越好，黑果追求的是稳定性，如果用着没什么毛病，没必要追求最新版OC，新版OC会带来新的问题，能用，稳定，无Bug就行，折腾党请便。  
 
