@@ -1,5 +1,7 @@
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI  
 
+This EFI has been reduced to 3m size. The boot speed is very fast, and there is basically no jam.
+
 The most concise OpenCore EFI boot for personal office computers. Everything is normal except IMessage.  
 it supports all i3-i5 processors used in the 4th generation Haswell architecture, and supports core display: hd4400 ~ hd4600
 
@@ -59,7 +61,11 @@ This EFI has been used on my computer for more than two years, and everything is
 
 ## Tips  
 
-1. OpenCORE does not mean that the more patches and drivers, the better, but the less. Xiaobai, who has just started here, is easy to step on thunder. He mistakenly thinks that the more patches, the better. In fact, he is wrong! This EFI has been reduced to 3m size. The boot speed is very fast, and there is basically no jam!
+1. OpenCORE does not mean that the more patches and drivers, the better, but the less. Novices are prone to misunderstandings.  
+
 2. the OpenCORE version is not as new as possible. Heiguo pursues stability. If there is nothing wrong with using it, there is no need to pursue the latest version of OC. The new version of OC will bring new problems. It can be used, stable, and free of bugs. Please help the party.
+
+## Concluding remarks  
+
 If I can help you, I hope I can give a star
 If you have any problems, please issue! Or email: licat233@gmail.com
