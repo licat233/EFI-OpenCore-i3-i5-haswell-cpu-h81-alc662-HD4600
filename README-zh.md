@@ -17,7 +17,7 @@
 
 | 组件      | 型号                                                                                                              |
 | --------- | ----------------------------------------------------------------------------------------------------------------- |
-| CPU       | 3.3 GHz 四核Intel Core i5 4590                                                                                    |
+| CPU       | 3.3 GHz 四核Intel Core i5 (睿频正常)4590                                                                                    |
 | 显卡      | HD4600 + NVIDIA Quadro K600                                                                                       |
 | 主板      | intel H81 芯片组 (七彩虹/colorful [C.H81M 全固态版 V22](https://www.colorful.cn/product_show.aspx?mid=84&id=145)) |
 | 内存      | 16 GB 1600 MHz DDR3                                                                                               |
@@ -43,11 +43,7 @@
 1. 如果是intel的wifi和蓝牙，请自行打上补丁，很简单。财力雄厚，可以购买bcm94360网卡；
 2. 如果是USB3.0不支持，请自行打上补丁，网上教程一大把；
 3. 如果啥问题都没有，那恭喜你，好好享用黑果吧；
-4. 如果CPU没有睿频成功，请参考[黑苹果CPU睿频教程](https://www.bilibili.com/read/cv16546696/)，关键驱动CPUFriend.kext已经放在dirvers文件夹中;  
-睿频成功后，测试结果如下，CPU频率可达到最高睿频:  
-![CPU睿频 截图](https://img.alicdn.com/imgextra/i2/917298378/O1CN01qwYCFn2BlB0Ul0Nmu_!!917298378.png)  
-如果图方便，可以根据自己的需要，添加这几个驱动:  
-![可选驱动 根据自己需要添加](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UPeyyN2BlB0VqtmT6_!!917298378.png)
+
 
 ## 安装遇到问题？
 
@@ -72,6 +68,11 @@
 ## 相关驱动  
 
 * Atheros网卡驱动：macOS Mojave以上系统取消了对Atheros网卡的支持，如果你的是Atheros网卡，请自行打Atheros网卡驱动到SLE内，记得关闭SIP，重建缓存；
+* 如果你的CPU没有睿频成功，请参考[黑苹果CPU睿频教程](https://www.bilibili.com/read/cv16546696/)，关键驱动CPUFriend.kext已经放在dirvers文件夹中;  
+睿频成功后，测试结果如下，CPU频率可达到最高睿频:  
+![CPU睿频 截图](https://img.alicdn.com/imgextra/i2/917298378/O1CN01qwYCFn2BlB0Ul0Nmu_!!917298378.png)  
+如果图方便，可以根据自己的需要，添加这几个驱动: 我自己的电脑睿频正常，所以config.list里面没有勾选  
+![可选驱动 根据自己需要添加](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UPeyyN2BlB0VqtmT6_!!917298378.png)
 
 ## Tips  
 
