@@ -1,9 +1,11 @@
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI
 
-此 EFI 已经被精简到 3M 大小了，开机速度非常快，基本无卡顿  
+此 EFI 已经被精简到 3M 大小，开机速度非常快，基本无卡顿  
 
 个人办公电脑自用最简洁OpenCore EFI引导，除了iMessage不能使用，其它一切正常。  
 理论上支持所有使用于4代Haswell架构i3-i5处理器，支持核显：HD4400 ~ HD4600  
+
+![Monterey 系统截图](https://img.alicdn.com/imgextra/i2/917298378/O1CN01AEuBbc2BlB0YYRlK2_!!917298378.png)
 
 ----
 
@@ -13,14 +15,16 @@
 
 ## 配置
 
-* CPU: 3.3 GHz 四核Intel Core i5 4590  
-* 显卡: HD4600 + NVIDIA Quadro K600
-* 主板: intel H81 芯片组 (七彩虹/colorful [C.H81M 全固态版 V22](https://www.colorful.cn/product_show.aspx?mid=84&id=145))
-* 内存: 16 GB 1600 MHz DDR3  
-* 网卡+蓝牙：bcm94360cd (免驱网卡 fenvi T919)  
-* 声卡：alc662  
-* 视频线：HDMI （由于K600显卡只有DP端口，所以使用了一个DP转HDMI的转接头）  
-* 显示器：23英寸(1920 x 1080)  
+| 组件      | 型号                                                                                                              |
+| --------- | ----------------------------------------------------------------------------------------------------------------- |
+| CPU       | 3.3 GHz 四核Intel Core i5 4590                                                                                    |
+| 显卡      | HD4600 + NVIDIA Quadro K600                                                                                       |
+| 主板      | intel H81 芯片组 (七彩虹/colorful [C.H81M 全固态版 V22](https://www.colorful.cn/product_show.aspx?mid=84&id=145)) |
+| 内存      | 16 GB 1600 MHz DDR3                                                                                               |
+| wifi/蓝牙 | bcm94360cd (免驱网卡 fenvi T919)                                                                                  |
+| 声卡      | alc662                                                                                                            |
+| 视频线    | HDMI （由于K600显卡只有DP端口，所以使用了一个DP转HDMI的转接头）                                                   |
+| 显示器    | 23英寸(1920 x 1080)                                                                                               |
 
 ## 配件
 
@@ -39,6 +43,11 @@
 1. 如果是intel的wifi和蓝牙，请自行打上补丁，很简单。财力雄厚，可以购买bcm94360网卡；
 2. 如果是USB3.0不支持，请自行打上补丁，网上教程一大把；
 3. 如果啥问题都没有，那恭喜你，好好享用黑果吧；
+4. 如果CPU没有睿频成功，请参考[黑苹果CPU睿频教程](https://www.bilibili.com/read/cv16546696/)，关键驱动CPUFriend.kext已经放在dirvers文件夹中;  
+睿频成功后，测试结果如下，CPU频率可达到最高睿频:  
+![CPU睿频 截图](https://img.alicdn.com/imgextra/i2/917298378/O1CN01qwYCFn2BlB0Ul0Nmu_!!917298378.png)  
+如果图方便，可以根据自己的需要，添加这几个驱动:  
+![可选驱动 根据自己需要添加](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UPeyyN2BlB0VqtmT6_!!917298378.png)
 
 ## 安装遇到问题？
 
