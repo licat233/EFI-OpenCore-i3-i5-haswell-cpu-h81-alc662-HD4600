@@ -1,3 +1,10 @@
+<!--
+ * @Author: licat
+ * @Date: 2023-01-03 14:20:12
+ * @LastEditors: licat
+ * @LastEditTime: 2023-01-03 15:12:42
+ * @Description: licat233@gmail.com
+-->
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI  
 
 This EFI has been reduced to 3m size. The boot speed is very fast, and there is basically no jam.
@@ -28,12 +35,14 @@ it supports all i3-i5 processors used in the 4th generation Haswell architecture
 > For example, the HFS patch is removed because OCS after 0.6.0 have their own HFS;
 > Please use config debug Plist, and then use config product Plist file;
 > Please use the corresponding EFI according to your own system;
+> If you install macOS High Sierra, you need to modify the machine time before installation: date 0712122318
 
 ## Note: platformInfo must be modified
 
 1. if it is Intel WiFi and Bluetooth, please patch it yourself. It is very simple. With abundant financial resources, you can buy bcm94360 network card;
 2. if USB3.0 does not support it, please patch it by yourself and do a lot of online tutorials;
 3. if there is no problem, congratulations and enjoy the black fruit;
+4. If the wired network card driver fails, please use RealtekRTL8100.kext driver instead;
 
 ## Problem with installation?
 
@@ -58,6 +67,16 @@ This EFI has been used on my computer for more than two years, and everything is
 ## Related drives
 
 * Atheros network card driver: the system above MacOS Mojave cancels the support for Atheros network card. If you have an Atheros network card, please call the Atheros network card driver into SLE by yourself. Remember to close SIP and rebuild the cache;
+* If your CPU is not successful, please refer to [Black Apple CPU Remax Tutorial]（ https://www.bilibili.com/read/cv16546696/ ）, the key driver CPUFriend.kext has been placed in the dirvers folder;
+After successful Remax, the test results are as follows, and the CPU frequency can reach the highest Remax:  
+![CPU Remax screenshot](https://img.alicdn.com/imgextra/i2/917298378/O1CN01qwYCFn2BlB0Ul0Nmu_!!917298378.png)  
+If the diagram is convenient, you can add these drivers according to your own needs: my own computer Ruipin is normal, so there is no check in config.list  
+![Optional drivers can be added according to your needs](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UPeyyN2BlB0VqtmT6_!!917298378.png)  
+* Cable network card drive failed?
+The reason is that the RealtekRTL8111.kext driver does not support the local wired network card. You need to change it to RealtekRTL8100.kext driver. There are two methods:
+① Put the RealtekRTL8100.kext drive into the EFI and restart it;
+![Failed to resolve the cable network card driver](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UanqFz2BlB2nKgWz9_!!917298378.png)  
+② Put the RealtekRTL8100.kext driver into the SLE. Remember to turn off SIP and rebuild the cache;
 
 ## Tips  
 

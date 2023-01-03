@@ -37,12 +37,14 @@
 > 如: 移除了 hfs 补丁，因为0.6.0之后的OC都自带了hfs；  
 > 安装请使用config-debug.plist，安装完成再使用config-product.plist文件；
 > 请根据自己系统使用对应的 EFI；
+> 如果安装macOS High Sierra，安装前需要修改机器时间: date 0712122318
 
 ## 说明：一定要修改 PlatformInfo  
 
 1. 如果是intel的wifi和蓝牙，请自行打上补丁，很简单。财力雄厚，可以购买bcm94360网卡；
 2. 如果是USB3.0不支持，请自行打上补丁，网上教程一大把；
 3. 如果啥问题都没有，那恭喜你，好好享用黑果吧；
+4. 如果有线网卡驱动失败，请改用 RealtekRTL8100.kext 驱动；
 
 
 ## 安装遇到问题？
@@ -73,6 +75,11 @@
 ![CPU睿频 截图](https://img.alicdn.com/imgextra/i2/917298378/O1CN01qwYCFn2BlB0Ul0Nmu_!!917298378.png)  
 如果图方便，可以根据自己的需要，添加这几个驱动: 我自己的电脑睿频正常，所以config.list里面没有勾选  
 ![可选驱动 根据自己需要添加](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UPeyyN2BlB0VqtmT6_!!917298378.png)
+* 有线网卡驱动失败？  
+  原因是 RealtekRTL8111.kext 驱动不支持本机有线网卡，需要更改为 RealtekRTL8100.kext 驱动即可，方法有两种：  
+  ①将RealtekRTL8100.kext驱动放入EFI内，重启即可；
+  ![解决有线网卡驱动失败](https://img.alicdn.com/imgextra/i3/917298378/O1CN01UanqFz2BlB2nKgWz9_!!917298378.png)  
+  ②将RealtekRTL8100.kext驱动放入SLE内，记得关闭SIP，重建缓存；
 
 ## Tips  
 
