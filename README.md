@@ -2,7 +2,7 @@
  * @Author: licat
  * @Date: 2023-01-03 14:20:12
  * @LastEditors: licat
- * @LastEditTime: 2023-01-03 15:12:42
+ * @LastEditTime: 2023-02-02 10:52:56
  * @Description: licat233@gmail.com
 -->
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI  
@@ -63,6 +63,7 @@ This EFI has been used on my computer for more than two years, and everything is
 * MacOS Catalina (recommended for i5 CPU, good compatibility, not recommended for I3 CPU, not very smooth)
 * MacOS Big Sur (not smooth enough, Not recommended for i3 CPU and i5 CPU)
 * MacOS Monterey (try it out. Since the latest version of Monterey has removed the built-in NVIDIA Kepler driver, you need to print the driver by yourself: [install NVIDIA driver tutorial](https://github.com/chris1111/Geforce-Kepler-patcher), Monterey is much smoother than bigsur, and Monterey is recommended for both)
+* MacOS Ventura (EFI for this version of the system is under development, please look forward to it)
 
 ## Related drives
 

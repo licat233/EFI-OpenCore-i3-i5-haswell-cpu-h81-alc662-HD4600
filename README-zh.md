@@ -66,6 +66,7 @@
 * macOS Catalina （i5 CPU推荐，兼容性好，i3 CPU不推荐，不太流畅）
 * macOS Big Sur （i3 CPU和i5 CPU都不推荐，流畅度不够）
 * macOS Monterey （尝鲜，由于Monterey最新版本已经移除了内置的英伟达开普勒驱动，所以需要自行打上驱动：[安装Nvidia驱动教程](https://github.com/chris1111/Geforce-Kepler-patcher)，Monterey相较BigSur要流畅得多，两者建议使用Monterey）
+* MacOSVentura（此版本系统的EFI正在开发中，敬请期待）
 
 ## 相关驱动  
 
