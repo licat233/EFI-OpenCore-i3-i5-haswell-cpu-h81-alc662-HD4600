@@ -2,7 +2,7 @@
  * @Author: licat
  * @Date: 2023-01-03 14:20:12
  * @LastEditors: licat
- * @LastEditTime: 2023-02-02 10:52:56
+ * @LastEditTime: 2023-02-02 10:55:13
  * @Description: licat233@gmail.com
 -->
 # OpenCore-i3-i5-haswell-cpu-h81-alc662-HD4600-EFI  
@@ -11,6 +11,8 @@ This EFI has been reduced to 3m size. The boot speed is very fast, and there is 
 
 The most concise OpenCore EFI boot for personal office computers. Everything is normal except IMessage.  
 it supports all i3-i5 processors used in the 4th generation Haswell architecture, and supports core display: hd4400 ~ hd4600
+
+![Monterey 系统截图](https://img.alicdn.com/imgextra/i2/917298378/O1CN01AEuBbc2BlB0YYRlK2_!!917298378.png)
 
 ----
 
